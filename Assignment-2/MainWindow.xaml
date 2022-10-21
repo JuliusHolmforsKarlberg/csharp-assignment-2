@@ -21,7 +21,7 @@
             </Grid.RowDefinitions>
 
             <StackPanel Grid.Row="0" Margin="20">
-                <TextBlock Text="Förnamn" Style="{StaticResource label}" />
+                <TextBlock Text="Förnamn" Style="{StaticResource label}" /> <!--Här har stylingen hämtats från-->
                 <TextBox x:Name="tb_FirstName" Style="{StaticResource field }" />
 
                 <TextBlock Text="Efternamn" Style="{StaticResource label}" />
@@ -31,7 +31,7 @@
                 <TextBox x:Name="tb_Email" Style="{StaticResource field }" />
 
                 <Grid>
-                    <Grid.ColumnDefinitions>
+                    <Grid.ColumnDefinitions> <!--Grid med tre kolumner-->
                         <ColumnDefinition Width="5*" />
                         <ColumnDefinition Width="2*" />
                         <ColumnDefinition Width="3*" />
@@ -57,7 +57,8 @@
 
             </StackPanel>
 
-            <Button x:Name="btn_Add"
+            <Button 
+                    x:Name="btn_Add"
                     Click="btn_Add_Click"
                     Grid.Row="1" 
                     Padding="35 8"
@@ -70,7 +71,7 @@
 
 
 
-        <ListView x:Name="lv_Contacts" SelectionChanged="lv_Contacts_SelectionChanged" Grid.Column="1" Margin="20" HorizontalContentAlignment="Stretch">
+        <ListView x:Name="lv_Contacts" SelectionChanged="lv_Contacts_SelectionChanged" Grid.Column="1" Margin="20" HorizontalContentAlignment="Stretch" Background="LightSteelBlue"> <!--Listview over it-->
             <ListView.ItemTemplate>
                 <DataTemplate >
                     <Grid>
